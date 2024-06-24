@@ -1,7 +1,8 @@
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
-// import { db } from "../../database/ConnectSql.js";
+import UsersRoute from "./routes/UsersRoute.js";
+// import { db } from "../../database/connectSql.js";
 
 
 // (async()=>{
@@ -14,6 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(helmet());
+
+// routes
+app.use("/api/v1/users", UsersRoute);
 
 
 export default app;

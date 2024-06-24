@@ -13,6 +13,7 @@ const startServer = async () => {
   if (FRAMEWORK === "express") {
     app = (await import("./frameworks/express/app.js")).default;
   } else if (FRAMEWORK === "nestjs") {
+    // kondisi jika menggunakan framework nestjs atau other
     // const { NestFactory } = await import("@nestjs/core");
     // const { AppModule } = await import("./frameworks/nestjs/app.module.ts");
     // app = await NestFactory.create(AppModule);
